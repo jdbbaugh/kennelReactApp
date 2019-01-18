@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-class AnimalList extends Component {
+export default class AnimalList extends Component {
   render() {
     const theOwners = this.props.owners;
     const theAnimals = this.props.animals;
@@ -24,9 +24,9 @@ class AnimalList extends Component {
         {
             ownerAnimalArray.map(ownerandAnimal =>
                <section key={ownerandAnimal.animalId}>
-                    <h1>Pet Owner:</h1>
+                    <h4>Pet Owner:</h4>
                    <p>{ownerandAnimal.owner}</p>
-                    <h1>Animal:</h1>
+                    <h4>Animal:</h4>
                    <p>{ownerandAnimal.animal}</p>
                    <hr></hr>
               </section>)
@@ -35,4 +35,3 @@ class AnimalList extends Component {
       )
     }
 }
-export default AnimalList
